@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Niyam's Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .header {
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    .blurred {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .typing-text {
+      border-right: 0.1em solid #666;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .blinking-cursor {
+      animation: blink 0.7s steps(40, end) infinite;
+    }
+
+    @keyframes blink {
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: black;
+      }
+    }
+
+    #hero {
+      background-image: url('assets/img/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #hero h1 {
+      font-size: 64px;
+      font-weight: bold;
+    }
+
+    #hero h2 {
+      font-size: 26px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">NJ</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="https://www.instagram.com/mainiyamhoon?igsh=MWc1OG01Nzk1bnY5OQ==" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/niyamjain--/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Niyam Jain</h1>
+      <h2>I'm  <span id="typing-text" class="typing-text blinking-cursor">Innovative Developer</span></h2>
+      <a href="about.html" class="btn-about">About Me</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright 2024 <strong><span>Niyam</span></strong>.
+      </div>
+      <div class="credits">
+        Designed and Developed by Niyam Jain
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('blurred');
+      } else {
+        header.classList.remove('blurred');
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const texts = ["Visionary Coder", "Precision-Driven Expert", "Creative-Troubleshooter"];
+      let count = 0;
+      let index = 0;
+      let currentText = '';
+      let letter = '';
+      let isDeleting = false;
+
+      (function type() {
+        if (count === texts.length) {
+          count = 0;
+        }
+        currentText = texts[count];
+
+        if (isDeleting) {
+          letter = currentText.slice(0, --index);
+        } else {
+          letter = currentText.slice(0, ++index);
+        }
+
+        document.querySelector('#typing-text').textContent =  letter;
+
+        let typeSpeed = 90;
+
+        if (isDeleting) {
+          typeSpeed /= 2;
+        }
+
+        if (!isDeleting && letter.length === currentText.length) {
+          typeSpeed = 2000;
+          isDeleting = true;
+        } else if (isDeleting && letter.length === 0) {
+          isDeleting = false;
+          count++;
+          typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+      })();
+    });
+  </script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
