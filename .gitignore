@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sub-projects (have their own repos)
+/ai-newsletter-platform
+/Research Document Processing

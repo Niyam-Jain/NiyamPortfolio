@@ -65,7 +65,7 @@ export const projects = [
       "Enterprise-level research analysis platform using multi-level batching, hierarchical chunking, vector retrieval pipelines, and LLM-based reasoning to process 1000+ page documents. Produces embeddings, executes topic-conditioned retrieval, cross-paper summarization, and maintains a persistent vector store for accelerated RAG-based queries.",
     tech: ["Python", "LLMs", "RAG", "Vector DB", "NLP"],
     github: "https://github.com/Niyam-Jain/Research-Document-Processing",
-    demo: "https://github.com/Niyam-Jain/Research-Document-Processing",
+    demo: "/projects/research-docs",
     category: "AI / LLM",
   },
   {
@@ -82,7 +82,7 @@ export const projects = [
       "AI-powered newsletter system with end-to-end workflow automation using LLMs for automated news summarization, ranking, and domain-specific content creation. Features fully automated pipelines from data ingestion to delivery.",
     tech: ["Python", "OpenAI API", "N8N", "Google Apps Script", "REST APIs"],
     github: "https://github.com/Niyam-Jain/AI-Newsletter",
-    demo: "https://github.com/Niyam-Jain/AI-Newsletter",
+    demo: "/projects/newsletter",
     category: "AI / LLM",
   },
   {
