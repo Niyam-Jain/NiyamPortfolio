@@ -91,15 +91,17 @@ export default function Projects() {
                       <Github size={14} />
                       Code
                     </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-primary"
-                    >
-                      <ExternalLink size={14} />
-                      Demo
-                    </a>
+                    {"demo" in project && project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-primary"
+                      >
+                        <ExternalLink size={14} />
+                        Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
